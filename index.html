@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NYT Search</title>
-    
+
     <!-- jQuery & Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -14,8 +15,67 @@
     <!--  Bootstrap CSS  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script src="assets/javascript/app.js"></script>
+
 </head>
+
 <body>
-    
+    <div class="container">
+        <h3 class="display-3">New YorkTimes Search</h3>
+
+
+        <!-- SEARCH FORM -->
+        <div class="card">
+            <h5 class="card-header nyt-card-header">Search Parameters</h5>
+
+            <div class="container">
+
+                <form>
+                    <!-- ROW 1 -->
+                    <div class="form-group">
+                        <label for="searchInput">Search Term</label>
+                        <input type="text" class="form-control" id="searchInput">
+                    </div>
+
+                    <!-- ROW 2 -->
+                    <div class="form-group">
+                        <label for="numRecordsInput">Number of Records to Retreive</label>
+                        <input type="text" class="form-control" id="numRecordsInput" placeholder="10">
+                    </div>
+
+                    <!-- ROW 3 -->
+                    <div class="form-group">
+                        <label for="startYearInput">Start Year (Optional):</label>
+                        <input type="text" class="form-control" id="startYearInput">
+                    </div>
+
+                    <!-- ROW 4 -->
+                    <div class="form-group">
+                        <label for="endYearInput">End Year (Optional):</label>
+                        <input type="text" class="form-control" id="endYearInput">
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <button id="btn-search" type="submit" class="btn btn-primary">Search</button>
+                    <button id="btn-clear" type="reset" class="btn btn-primary">Clear Results</button>
+
+                </form>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- RESULTS -->
+        <div class="card">
+            <h5 class="card-header nyt-card-header">Top Articles</h5>
+
+            <div class="container"></div>
+            <div id="articles" class="container"></div>
+        </div>
+    </div>
 </body>
+
 </html>
