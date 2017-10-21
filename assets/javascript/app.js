@@ -12,9 +12,9 @@
 
 // main process
 
-$("button").on("click", function () {
+$("#btn-search").on("click", function () {
 
-
+console.log("im in the button search");
 var pageLimit = 5;
 var beginDate = "20170101";
 var endDate = "20171231";
